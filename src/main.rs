@@ -28,11 +28,11 @@ fn main() -> io::Result<()> {
       let mut branch_number = branch_name.split('-')
         .collect::<Vec<&str>>()[0].to_string();
       trim_newline(&mut branch_number);
-      print!("{}-...", branch_number);
+      print!("({}-...)", branch_number);
     }else{
       let mut branch_name_stripped = branch_name.to_string();
       trim_newline(&mut branch_name_stripped);
-      print!("{}", branch_name_stripped);
+      print!("({})", branch_name_stripped);
     }
   }
   Ok(())
