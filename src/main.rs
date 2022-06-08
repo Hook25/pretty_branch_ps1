@@ -1,5 +1,13 @@
 use std::io;
 
+/*
+Reads branch from stdin
+- Outputs N-... for branches starting with a number
+- Outputs the branch name for others
+
+Useful for PS1 when using gitlab where the default name
+for MR is NNN-issue-name
+*/
 fn main() -> io::Result<()> {
   let mut branch_name = String::new();
   io::stdin().read_line(&mut branch_name)?;
